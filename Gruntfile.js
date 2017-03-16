@@ -14,6 +14,7 @@ module.exports = function (grunt) {
       templates: 'templates',
       dist: 'build',
       tmp: '.tmp',
+      coverage: 'coverage',
       serverPort: 9001,
       testPort: 9002
     },
@@ -23,7 +24,8 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= conf.tmp %>/',
-          '<%= conf.dist %>/'
+          '<%= conf.dist %>/',
+          '<%= conf.coverage %>/'
         ]
       },
       tmp: {
@@ -304,6 +306,29 @@ module.exports = function (grunt) {
       },
       debug: {
         configFile: 'karma.conf.js'
+      },
+      coverage: {
+        configFile: 'karma.conf.js',
+        preprocessors: {
+          // source files, that you wanna generate coverage for
+          // do not include tests or libraries
+          // (these files will be instrumented by Istanbul)
+          'build/scripts/**/*!(spec).js': ['coverage']
+        },
+        coverageReporter: {
+          type: 'html',
+          dir: '<%= conf.coverage %>/'
+        },
+        reporters: ['spec', 'coverage'],
+        singleRun: true,
+        browsers: ['PhantomJS'],
+        plugins: [
+          'karma-jasmine',
+          'karma-chrome-launcher',
+          'karma-phantomjs-launcher',
+          'karma-spec-reporter',
+          'karma-coverage'
+        ]
       }
     },
 
@@ -361,7 +386,7 @@ module.exports = function (grunt) {
   ]);
 
   // Run e2e tests
-  grunt.registerTask('test:e2e', [
+  grunt.registerTask('e2e', [
     'clean:dist',
     'sync:build',
     'wiredep:build',
@@ -373,13 +398,27 @@ module.exports = function (grunt) {
   ]);
 
   // Run unit tests
-  grunt.registerTask('test:unit', [
-    'clean:dist',
-    'sync:build',
-    'wiredep:build',
-    'ts:build',
-    'includeSource:build',
-    'less:build',
-    process.argv.indexOf("--debug") > -1 ? 'karma:debug' : 'karma:singlerun'
-  ]);
+  grunt.registerTask('unit', function (param) {
+    if (!param) {
+      grunt.task.run([
+        'clean:dist',
+        'sync:build',
+        'wiredep:build',
+        'ts:build',
+        'includeSource:build',
+        'less:build',
+        'karma:singlerun'
+      ]);
+    } else {
+      grunt.task.run([
+        'clean:dist',
+        'sync:build',
+        'wiredep:build',
+        'ts:build',
+        'includeSource:build',
+        'less:build',
+        'karma:' + param
+      ]);
+    }
+  });
 };

@@ -54,14 +54,21 @@ This will also run a watch task which is going to:
 ### Unit tests with Karma
 To run unit tests, run the following command:
 ```
-grunt test:unit
+grunt unit
 ```
 This will run all unit tests.
 
-To debug unit tests you can use command with debug flag:
+##### Debug unit tests
+To debug unit tests you can use command with debug parameter:
 ```
-grunt test:unit --debug
+grunt unit:debug
 ```
+##### Coverage
+To generate coverage you can use command with coverage parameter:
+```
+grunt unit:coverage
+```
+> This will create _coverage_ folder.
 
 ### E2E tests
 To run e2e tests, run the following command:
@@ -82,16 +89,16 @@ This will generate a zip file with application ready for deployment.
 ## Adding third party library
 Use bower to add third party libraries.
 
-Example:
+*Example:*
 ```
 bower install angular-translate --save
 ```  
 ### Installing typings
 To install typings use npm.
 
-Example:
+*Example:*
 ```
 npm install @types/angular-translate --save-dev
 ```
 
-*NOTE:* After installation we need to add typing to tsconfig.json in "types" array.
+**NOTE:** After installation we need to add typing to tsconfig.json in "types" array.

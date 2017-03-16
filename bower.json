@@ -2,7 +2,7 @@
   "name": "angularjs-typescript-grunt-seed",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Starter project for AngularJS/TypeScript application",
+  "description": "Starter project for AngularJS/Typescript application",
   "author": "Vladan Petrovic <vladanpetrovic89@gmail.com>",
   "dependencies": {
     "angular": "~1.6.3",

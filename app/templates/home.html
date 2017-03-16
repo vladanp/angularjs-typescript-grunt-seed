@@ -1,0 +1,18 @@
+<div>
+  <h1 class="home-title">{{home.title}}</h1>
+  <div>
+    <my-directive title="I am directive binding"></my-directive>
+  </div>
+  <div class="spacer">
+    Filtered value: {{'converted to uppercase' | customUppercase}}
+  </div>
+  <div>
+    Data from service:
+    <ul>
+      <li ng-repeat="item in home.items">
+        id: {{item.id}}, name: {{item.name}}
+      </li>
+    </ul>
+  </div>
+  <img ng-src="images/logo.png" />
+</div>

@@ -58,12 +58,12 @@ grunt unit
 ```
 This will run all unit tests.
 
-##### Debug unit tests
+#### Debug unit tests
 To debug unit tests you can use command with debug parameter:
 ```
 grunt unit:debug
 ```
-##### Coverage
+#### Coverage
 To generate coverage you can use command with coverage parameter:
 ```
 grunt unit:coverage

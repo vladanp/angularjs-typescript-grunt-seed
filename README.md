@@ -16,8 +16,8 @@ This is starter project for AngularJS/Typescript application.
 Clone the repository using [git](http://git-scm.com/):
 
 ```
-git clone https://github.com/vladanp/angularjs-typescript-grunt.git
-cd angularjs-typescript-grunt
+git clone https://github.com/vladanp/angularjs-typescript-grunt-seed.git
+cd angularjs-typescript-grunt-seed
 ```
 
 ### Install dependencies
@@ -51,14 +51,14 @@ This will also run a watch task which is going to:
 * Reload browser every time a file is saved
 
 ## Testing
-### Unit tests with coverage
+### Unit tests with Karma
 To run unit tests, run the following command:
 ```
 grunt test:unit
 ```
 This will run all unit tests.
 
-To debug unit tests you can use command with flag:
+To debug unit tests you can use command with debug flag:
 ```
 grunt test:unit --debug
 ```
@@ -87,7 +87,7 @@ Example:
 bower install angular-translate --save
 ```  
 ### Installing typings
-To install typings we use npm.
+To install typings use npm.
 
 Example:
 ```

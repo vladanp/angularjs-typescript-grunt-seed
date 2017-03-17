@@ -1,9 +1,8 @@
-module app.home {
-  "use strict";
+namespace app.home {
 
   export class HomeController {
 
-    injection(): any[] {
+    public injection(): any[] {
       return ['$state', 'HomeService', HomeController];
     }
 
@@ -17,8 +16,8 @@ module app.home {
       this.init();
     }
 
-    init(): void {
-      this.title = "Hi! I am from home controller";
+    private init(): void {
+      this.title = 'Hi! I am from home controller';
       this.items = this.homeService.getData();
     }
   }

@@ -25,11 +25,11 @@ cd angularjs-typescript-grunt-seed
 
 2. Install [Grunt CLI](http://gruntjs.com/getting-started) plugin for creating Grunt projects
 
-        $ npm install -g grunt-cli@1.2.0
+        $ npm install -g grunt-cli
 
 3. Install [Bower](http://bower.io/) for app specific dependencies
  
-        $ npm install -g bower@1.7.9
+        $ npm install -g bower
 
 4. Now we can install all the node and bower modules we need for our project
 
@@ -73,7 +73,7 @@ grunt unit:coverage
 ### E2E tests
 To run e2e tests, run the following command:
 ```
-grunt test:protractor
+grunt e2e
 ```  
 This will run protractor e2e tests.
 
@@ -86,19 +86,17 @@ grunt build
 ```
 This will generate a zip file with application ready for deployment.
 
-## Adding third party library
+## Add third party library
 Use bower to add third party libraries.
 
 *Example:*
 ```
 bower install angular-translate --save
 ```  
-### Installing typings
-To install typings use npm.
+### Install typing
+To install typing use npm.
 
 *Example:*
 ```
 npm install @types/angular-translate --save-dev
 ```
-
-**NOTE:** After installation we need to add typing to tsconfig.json in "types" array.

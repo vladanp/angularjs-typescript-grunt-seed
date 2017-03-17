@@ -1,5 +1,4 @@
-module test {
-  'use strict';
+namespace test {
 
   describe('My directive', function () {
     let element: angular.IAugmentedJQuery,
@@ -32,7 +31,7 @@ module test {
       $compile(element)($rootScope.$new());
       $rootScope.$digest();
 
-      myController = element.controller("myDirective");
+      myController = element.controller('myDirective');
     });
 
     it('should be compiled', function () {
@@ -41,13 +40,13 @@ module test {
 
     it('should have isolate scope object with instanciate members', function () {
       expect(myController).not.toBeNull();
-      expect(myController.title).toBe("test title");
+      expect(myController.title).toBe('test title');
     });
 
     it('should change value', function () {
       myController.changeValue();
 
-      expect(myController.title).toBe("I am changed inside directive");
+      expect(myController.title).toBe('I am changed inside directive');
     });
   });
 }

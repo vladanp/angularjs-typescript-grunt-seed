@@ -1,21 +1,20 @@
-module app.common {
-  "use strict";
+namespace app.common {
 
   export class MyDirective implements angular.IDirective {
-    restrict = 'E';
-    templateUrl = 'templates/mydirective.html';
-    scope = {};
-    controller = MyController;
-    controllerAs = "dir";
-    bindToController = {
+    public restrict = 'E';
+    public templateUrl = 'templates/mydirective.html';
+    public scope = {};
+    public controller = MyController;
+    public controllerAs = 'dir';
+    public bindToController = {
       title: '@'
     };
 
-    link(scope: ng.IScope, elements: ng.IAugmentedJQuery, attrs: ng.IAttributes) {
+    public link(scope: ng.IScope, elements: ng.IAugmentedJQuery, attrs: ng.IAttributes) {
 
     }
 
-    static instance(): ng.IDirective {
+    public static instance(): ng.IDirective {
       return new MyDirective();
     }
   }
@@ -23,12 +22,12 @@ module app.common {
   export class MyController {
     public title: string;
 
-    static $inject: string[] = [];
+    public static $inject: string[] = [];
 
     constructor() { }
 
-    changeValue(): void {
-      this.title = "I am changed inside directive";
+    public changeValue(): void {
+      this.title = 'I am changed inside directive';
     }
   }
 }

@@ -1,10 +1,12 @@
-module app {
+namespace app {
 
   angular.module('app', [
-    'ui.router'
+    'ui.router',
+    'app.config'
   ])
 
     // Configs
+    .config(app.config.CompileConfiguration.prototype.injection())
     .config(app.config.StateProviderConfiguration.prototype.injection())
 
     // Controllers
@@ -14,9 +16,9 @@ module app {
     .service('HomeService', app.home.HomeService.prototype.injection())
 
     // Directives
-    .directive("myDirective", app.common.MyDirective.instance)
+    .directive('myDirective', app.common.MyDirective.instance)
 
     // Filters
-    .filter("customUppercase", app.common.CustomUppercase.injection())
+    .filter('customUppercase', app.common.CustomUppercase.injection())
     ;
 }

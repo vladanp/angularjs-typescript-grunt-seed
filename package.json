@@ -33,12 +33,15 @@
     "grunt-include-source": "~1.0.0",
     "grunt-karma": "~2.0.0",
     "grunt-newer": "~1.2.0",
+    "grunt-ng-constant": "~2.0.1",
     "grunt-protractor-runner": "~4.0.0",
     "grunt-sync": "~0.6.2",
-    "grunt-ts": "~5.5.1",
+    "grunt-ts": "~6.0.0-beta.15",
+    "grunt-tslint": "~4.0.1",
     "grunt-usemin": "~3.1.1",
     "grunt-wiredep": "~3.0.1",
     "jasmine-core": "~2.5.2",
+    "jit-grunt": "~0.10.0",
     "karma": "~1.5.0",
     "karma-chrome-launcher": "~2.0.0",
     "karma-coverage": "~1.1.1",
@@ -47,9 +50,12 @@
     "karma-spec-reporter": "~0.0.30",
     "less-plugin-autoprefix": "~1.5.1",
     "less-plugin-clean-css": "~1.5.1",
+    "load-grunt-config": "~0.19.2",
     "load-grunt-tasks": "~3.5.2",
     "protractor": "~4.0.13",
-    "typescript": "~2.1.5"
+    "time-grunt": "~1.4.0",
+    "tslint": "~4.5.1",
+    "typescript": "~2.2.1"
   },
   "engines": {
     "node": ">=0.10.0"

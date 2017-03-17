@@ -1,5 +1,4 @@
-module test {
-  'use strict';
+namespace test {
 
   describe('My filter', function () {
     let $filter: ng.IFilterService;
@@ -17,9 +16,9 @@ module test {
     });
 
     it('should convert to uppercase', function () {
-      var uppercaseText = $filter<Function>('customUppercase')('test');
+      let uppercaseText = $filter<Function>('customUppercase')('test');
 
-      expect(uppercaseText).toEqual("TEST");
+      expect(uppercaseText).toEqual('TEST');
     });
   });
 }

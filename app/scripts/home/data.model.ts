@@ -1,5 +1,4 @@
-module app.home {
-  'use strict';
+namespace app.home {
 
   export class DataItem {
     constructor(

@@ -1,5 +1,4 @@
-module test {
-  'use strict';
+namespace test {
 
   describe('Home Controller', () => {
     // Declare dependencies and common vars
@@ -24,7 +23,7 @@ module test {
     });
 
     it('should test title', () => {
-      expect(homeController.title).toEqual("Hi! I am from home controller");
+      expect(homeController.title).toEqual('Hi! I am from home controller');
     });
 
     it('should get items', () => {

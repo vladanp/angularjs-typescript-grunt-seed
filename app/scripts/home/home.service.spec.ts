@@ -1,23 +1,26 @@
-describe('Home Service', () => {
-  // Declare dependencies and common vars
-  let homeService: app.home.HomeService
+namespace test {
 
-  // Setup dependencies/mocks
-  beforeEach(() => {
-    // Main module
-    angular.mock.module('app');
+  describe('Home Service', () => {
+    // Declare dependencies and common vars
+    let homeService: app.home.HomeService;
 
-    // Injections
-    angular.mock.inject((
+    // Setup dependencies/mocks
+    beforeEach(() => {
+      // Main module
+      angular.mock.module('app');
 
-    ) => {
+      // Injections
+      angular.mock.inject((
 
+      ) => {
+
+      });
+
+      homeService = new app.home.HomeService();
     });
 
-    homeService = new app.home.HomeService();
+    it('should test data', () => {
+      expect(homeService.getData().length).toBe(5);
+    });
   });
-
-  it('should test data', () => {
-    expect(homeService.getData().length).toBe(5);
-  });
-});
+}

@@ -1,21 +1,20 @@
-module app.home {
-  "use strict";
+namespace app.home {
 
   export class HomeService {
 
     private data: DataItem[] = [];
 
-    injection(): any[] {
-      return [HomeService]
+    public injection(): any[] {
+      return [HomeService];
     }
 
     constructor() {
       for (let i = 0; i < 5; i++) {
-        this.data.push({ id: i, name: "item" + i });
+        this.data.push({ id: i, name: 'item' + i });
       }
     }
 
-    getData(): DataItem[] {
+    public getData(): DataItem[] {
       return this.data;
     }
   }

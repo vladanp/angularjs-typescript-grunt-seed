@@ -1,9 +1,8 @@
-module app.common {
-  "use strict";
+namespace app.common {
 
   export class CustomUppercase {
     public static injection() {
-      var filter = ($filter: ng.IFilterService) => {
+      let filter = ($filter: ng.IFilterService) => {
         return (value: string) => {
           return $filter('uppercase')(value);
         };

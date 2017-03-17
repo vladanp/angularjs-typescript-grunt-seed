@@ -1,9 +1,9 @@
-module app.config {
+namespace app.config {
 
   export class StateProviderConfiguration {
 
-    injection(): any[] {
-      return ['$stateProvider', '$urlRouterProvider', StateProviderConfiguration]
+    public injection(): any[] {
+      return ['$stateProvider', '$urlRouterProvider', StateProviderConfiguration];
     }
 
     constructor(private $stateProvider: ng.ui.IStateProvider, private $urlRouterProvider: ng.ui.IUrlRouterProvider) {
@@ -13,7 +13,7 @@ module app.config {
           url: '/home',
           templateUrl: 'templates/home.html',
           controller: 'HomeController',
-          controllerAs: "home"
+          controllerAs: 'home'
         });
 
       // If none of the above states are matched, use this as the fallback

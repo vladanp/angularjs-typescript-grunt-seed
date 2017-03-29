@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     'less:build',
   ]);
 
-  grunt.registerTask('unit', function (param) {
+  grunt.registerTask('test', function (param) {
     grunt.task.run('buildForUnit');
     !param ? grunt.task.run('karma:singlerun') : grunt.task.run('karma:' + param);
   });

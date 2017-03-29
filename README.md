@@ -54,19 +54,19 @@ This will also run a watch task which is going to:
 ### Unit tests with Karma
 To run unit tests, run the following command:
 ```
-grunt unit
+grunt test
 ```
 This will run all unit tests.
 
 #### Debug unit tests
 To debug unit tests you can use command with debug parameter:
 ```
-grunt unit:debug
+grunt test:debug
 ```
 #### Coverage
 To generate coverage you can use command with coverage parameter:
 ```
-grunt unit:coverage
+grunt test:coverage
 ```
 > This will create _coverage_ folder.
 

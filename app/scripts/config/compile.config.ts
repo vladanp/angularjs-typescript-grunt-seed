@@ -5,9 +5,15 @@ namespace app.config {
    */
   export class CompileConfiguration {
 
-    public injection(): any[] {
-      return ['$compileProvider', 'debug', CompileConfiguration];
-    }
+    /**
+     * $inject annotation.
+     * It provides $injector with information about dependencies to be injected into constructor.
+     * The parameters must match in count and type.
+     */
+    public static $inject = [
+      '$compileProvider',
+      'debug'
+    ];
 
     /**
      * Creates an instance of CompileConfiguration.

@@ -5,9 +5,15 @@ namespace app.config {
    */
   export class StateProviderConfiguration {
 
-    public injection(): any[] {
-      return ['$stateProvider', '$urlRouterProvider', StateProviderConfiguration];
-    }
+    /**
+     * $inject annotation.
+     * It provides $injector with information about dependencies to be injected into constructor.
+     * The parameters must match in count and type.
+     */
+    public static $inject = [
+      '$stateProvider',
+      '$urlRouterProvider'
+    ];
 
     /**
      * Creates an instance of StateProviderConfiguration.

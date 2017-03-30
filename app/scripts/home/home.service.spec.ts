@@ -2,7 +2,8 @@ namespace test {
 
   describe('Home Service', () => {
     // Declare dependencies and common vars
-    let homeService: app.home.HomeService;
+    let homeService: app.home.HomeService,
+      $http: ng.IHttpService;
 
     // Setup dependencies/mocks
     beforeEach(() => {
@@ -11,12 +12,12 @@ namespace test {
 
       // Injections
       angular.mock.inject((
-
+        _$http_: ng.IHttpService
       ) => {
-
+        $http = _$http_;
       });
 
-      homeService = new app.home.HomeService();
+      homeService = new app.home.HomeService($http);
     });
 
     it('should test data', () => {

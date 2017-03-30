@@ -23,6 +23,7 @@ namespace test {
       });
 
       $templateCache.put('templates/mydirective.html', '<div>{{dir.title}}</div>');
+      $templateCache.put('templates/home.html', '<div>Home</div>');
 
       element = angular.element(`
         <my-directive title="test title"></my-directive>

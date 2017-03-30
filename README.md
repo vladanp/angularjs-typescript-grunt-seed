@@ -2,7 +2,7 @@
 This is starter project for AngularJS/Typescript application.
 
 ## Technologies
-- [AngularJS](https://angularjs.org/)
+- [AngularJS 1.5](https://angularjs.org/)
 - [Typescript](http://www.typescriptlang.org/) 
 - [LESS](http://lesscss.org/)
 - [Bower](http://bower.io/)

@@ -7,15 +7,20 @@ namespace app.home {
 
     private data: DataItem[] = [];
 
-    public injection(): any[] {
-      return [HomeService];
-    }
+    /**
+     * $inject annotation.
+     * It provides $injector with information about dependencies to be injected into constructor.
+     * The parameters must match in count and type.
+     */
+    public static $inject = [
+      '$http'
+    ];
 
     /**
      * Creates a new HomeService.
      * @constructor
      */
-    constructor() {
+    constructor($http: ng.IHttpService) {
       for (let i = 0; i < 5; i++) {
         this.data.push({ id: i, name: 'item' + i });
       }

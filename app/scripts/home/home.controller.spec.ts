@@ -4,7 +4,8 @@ namespace test {
     // Declare dependencies and common vars
     let homeController: app.home.HomeController,
       homeService: app.home.HomeService,
-      $state: ng.ui.IStateService;
+      $state: ng.ui.IStateService,
+      $http: ng.IHttpService;
 
     // Setup dependencies/mocks
     beforeEach(() => {
@@ -12,12 +13,14 @@ namespace test {
 
       // Injections
       angular.mock.inject((
-        _$state_: ng.ui.IStateService
+        _$state_: ng.ui.IStateService,
+        _$http_: ng.IHttpService
       ) => {
         $state = _$state_;
+        $http = _$http_;
       });
 
-      homeService = new app.home.HomeService();
+      homeService = new app.home.HomeService($http);
 
       homeController = new app.home.HomeController($state, homeService);
     });

@@ -5,15 +5,22 @@ namespace app.home {
    */
   export class HomeController {
 
-    public injection(): any[] {
-      return ['$state', 'HomeService', HomeController];
-    }
-
     public title: string;
     public items: DataItem[];
 
     /**
+     * $inject annotation.
+     * It provides $injector with information about dependencies to be injected into constructor.
+     * The parameters must match in count and type.
+     */
+    public static $inject = [
+      '$state',
+      'HomeService'
+    ];
+
+    /**
      * Creates an instance of HomeController.
+     * Dependencies are injected via AngularJS $injector.
      * @param {ng.ui.IStateService} $state - The injected $state.
      * @param {HomeService} homeService - The injected HomeService.
      * @constructor

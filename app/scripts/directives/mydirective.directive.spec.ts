@@ -2,7 +2,7 @@ namespace test {
 
   describe('My directive', function () {
     let element: angular.IAugmentedJQuery,
-      myController: app.common.MyController,
+      myController: app.directives.MyController,
       $compile: angular.ICompileService,
       $rootScope: angular.IRootScopeService,
       $templateCache: ng.ITemplateCacheService;

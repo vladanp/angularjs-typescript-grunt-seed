@@ -11,8 +11,8 @@ namespace app {
     /**
      * Configs
      */
-    .config(app.config.CompileConfiguration)
-    .config(app.config.StateProviderConfiguration)
+    .config(app.configs.CompileConfiguration)
+    .config(app.configs.StateProviderConfiguration)
 
     /**
      * Controllers
@@ -27,11 +27,11 @@ namespace app {
     /**
      * Directives
      */
-    .directive('myDirective', app.common.MyDirective.factory())
+    .directive('myDirective', app.directives.MyDirective.factory())
 
     /**
      * Filters
      */
-    .filter('customUppercase', app.common.CustomUppercase.factory())
+    .filter('customUppercase', app.filters.CustomUppercase.factory())
     ;
 }

@@ -1,4 +1,4 @@
-namespace app.common {
+namespace app.filters {
 
   /**
    * This class represents Example of a typescript filter.

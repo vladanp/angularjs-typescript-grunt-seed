@@ -1,4 +1,4 @@
-namespace app.common {
+namespace app.directives {
 
   /**
    * This class represents Example of a typescript directive.

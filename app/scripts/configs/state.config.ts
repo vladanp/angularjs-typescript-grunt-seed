@@ -1,4 +1,4 @@
-namespace app.config {
+namespace app.configs {
 
   /**
    * This class represents state provider configuration.

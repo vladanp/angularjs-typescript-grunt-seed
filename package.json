@@ -15,10 +15,11 @@
     "postinstall": "node ./node_modules/protractor/bin/webdriver-manager update"
   },
   "devDependencies": {
-    "@types/angular": "~1.5.23",
-    "@types/angular-mocks": "~1.5.9",
-    "@types/angular-ui-router": "~1.1.36",
-    "@types/jasmine": "~2.5.43",
+    "@types/angular": "1.5.23",
+    "@types/angular-mocks": "1.5.9",
+    "@types/angular-ui-router": "1.1.36",
+    "@types/jasmine": "2.5.43",
+    "@types/jquery": "2.0.45",
     "bower": "~1.8.0",
     "grunt": "~1.0.1",
     "grunt-angular-templates": "~1.1.0",
